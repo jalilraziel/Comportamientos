@@ -116,9 +116,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Cagente.h" />
+    <ClInclude Include="cObjetoDeJuego.h" />
+    <ClInclude Include="cVector2.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cagente.cpp" />
+    <ClCompile Include="cObjetoDeJuego.cpp" />
+    <ClCompile Include="cVector2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
