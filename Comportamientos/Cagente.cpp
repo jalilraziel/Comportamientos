@@ -25,14 +25,19 @@ void cBoid::SetDir(cVector2 dir)
 
 cVector2 cBoid::Seek(cVector2 pos, float mag)
 {
-	
-	return cVector2();
+	cVector2 nuevo = (pos - Position);
+	nuevo.normalized();
+	nuevo *= mag;
+	return nuevo;
 }
 
 cVector2 cBoid::Flee(cVector2 pos, float mag)
 {
 
-	return cVector2();
+	cVector2 nuevo = (Position - pos);
+	nuevo.normalized();
+	nuevo *= mag;
+	return nuevo;
 }
 
 cVector2 cBoid::Parsue(cVector2, float mag, float tiem)
