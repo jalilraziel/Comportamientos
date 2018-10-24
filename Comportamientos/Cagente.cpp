@@ -1,5 +1,5 @@
 #include "Cagente.h"
-
+#include "cVector2.h"
 
 
 cBoid::cBoid()
@@ -13,21 +13,25 @@ cBoid::~cBoid()
 
 cVector2 cBoid::GetDir()
 {
-	return cVector2();
+
+	return Dir;
 }
 
-cVector2 cBoid::SetDir(cVector2 dir)
+void cBoid::SetDir(cVector2 dir)
 {
-	return cVector2();
+	Dir.x = dir.x;
+	Dir.y = dir.y;
 }
 
 cVector2 cBoid::Seek(cVector2 pos, float mag)
 {
+	
 	return cVector2();
 }
 
 cVector2 cBoid::Flee(cVector2 pos, float mag)
 {
+
 	return cVector2();
 }
 

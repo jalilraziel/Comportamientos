@@ -6,7 +6,7 @@ private:
 	cVector2 Dir;
 public:
 	cVector2 GetDir();
-	cVector2 SetDir(cVector2 dir);
+	void SetDir(cVector2 dir);
 	cVector2 Seek(cVector2 pos, float mag);
 	cVector2 Flee(cVector2 pos, float mag);
 	cVector2 Parsue(cVector2,float mag, float tiem);
