@@ -4,6 +4,7 @@ class cBoid:cGameObject
 {
 private:
 	cVector2 Dir;
+	int Rad;
 public:
 	cVector2 GetDir();
 	void SetDir(cVector2 dir);
@@ -16,6 +17,8 @@ public:
 	cVector2 Follow_path();
 	cVector2 Patrol();
 	cBoid();
+	cBoid(int a,int b);
+	cBoid(int a, int b,int c);
 	~cBoid();
 };
 
