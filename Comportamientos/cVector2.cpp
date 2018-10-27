@@ -36,14 +36,21 @@ float cVector2::Mag()
 
 float cVector2::ang()
 {
-	
-
+	float A = atan2(x, y);
+	return A;
 }
 
 float cVector2::dot(cVector2 other)
 {
 	float A = ((x * other.x) + (y * other.y));
 	return A;
+}
+
+cVector2 cVector2::projection(cVector2 other)
+{
+	cVector2 projection = other;
+	projection *= (dot(other)/pow(Mag(), 2));
+	return projection;
 }
 
 cVector2 cVector2::cross(cVector2 other)

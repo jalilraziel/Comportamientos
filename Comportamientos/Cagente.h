@@ -1,5 +1,6 @@
 #pragma once
 #include "cObjetoDeJuego.h"
+#include <vector> 
 class cBoid:cGameObject
 {
 private:
@@ -10,15 +11,14 @@ public:
 	void SetDir(cVector2 dir);
 	cVector2 Seek(cVector2 pos, float mag);
 	cVector2 Flee(cVector2 pos, float mag);
-	cVector2 Parsue(cVector2,float mag, float tiem);
-	cVector2 Evade(cVector2, float mag, float tiem);
-	cVector2 Wonder_Ramdom();
-	cVector2 Wonder_dir();
-	cVector2 Follow_path();
+	cVector2 Parsue(cVector2, float rad, float mag, float tiem);
+	cVector2 Evade(cVector2, float rad, float mag, float tiem);
+	cVector2 Wander_Ramdom();
+	cVector2 Wander_dir(float dis, float rad, float ang, float mag);
+	cVector2 Follow_path(cVector2 prev, cVector2 next, float rad);
 	cVector2 Patrol();
 	cBoid();
 	cBoid(int a,int b);
-	cBoid(int a, int b,int c);
 	~cBoid();
 };
 

@@ -1,5 +1,8 @@
 #include "Cagente.h"
+#include "math.h"
 #include "cVector2.h"
+#include <stdlib.h>
+#include <time.h> 
 
 
 cBoid::cBoid()
@@ -15,14 +18,6 @@ cBoid::cBoid(int a, int b)
 	Dir.y = b;
 	Rad = 3;
 }
-
-cBoid::cBoid(int a, int b, int c)
-{
-	Dir.x = a;
-	Dir.y = b;
-	Rad = c;
-}
-
 
 cBoid::~cBoid()
 {
@@ -42,7 +37,7 @@ void cBoid::SetDir(cVector2 dir)
 cVector2 cBoid::Seek(cVector2 pos, float mag)
 {
 	cVector2 nuevo = (pos - Position);
-	nuevo.normalized();
+	nuevo.normalize();
 	nuevo *= mag;
 	return nuevo;
 }
@@ -51,41 +46,67 @@ cVector2 cBoid::Flee(cVector2 pos, float mag)
 {
 
 	cVector2 nuevo = (Position - pos);
-	nuevo.normalized();
+	nuevo.normalize();
 	nuevo *= mag;
 	return nuevo;
 }
 
-cVector2 cBoid::Parsue(cVector2 pos, float mag, float tiem)
+cVector2 cBoid::Parsue(cVector2 pos, float rad, float mag, float tiem)
 {
 	cVector2 nuevo = Seek(GetDir()*tiem, mag);
-	nuevo.normalized();
+	nuevo.normalize();
+	nuevo *= mag;
 	return nuevo;
 }
 
-cVector2 cBoid::Evade(cVector2 pos, float mag, float tiem)
+cVector2 cBoid::Evade(cVector2 pos, float rad, float mag, float tiem)
 {
 	cVector2 nuevo = Flee(GetDir()*tiem, mag);
-	nuevo.normalized();
+	nuevo.normalize();
+	nuevo *= mag;
 	return nuevo;
 }
 
-cVector2 cBoid::Wonder_Ramdom()
+cVector2 cBoid::Wander_Ramdom()
 {
-	return cVector2();
+	srand(time(NULL));
+	int a, b;
+	a = rand() % 21 + (-10);
+	b = rand() % 21 + (-10);
+	cVector2 nuevo(a, b);
+	return nuevo;
 }
 
-cVector2 cBoid::Wonder_dir()
+cVector2 cBoid::Wander_dir(float dis, float rad, float ang, float mag)
 {
-	return cVector2();
+	srand(time(NULL));
+	cVector2 center_circle = Position + (Dir*dis);
+	cVector2 nuevo(cos(atan(Dir.y / Dir.x) + ((rand() % 11 + (-5) / 10))*ang*rad), sin(atan(Dir.y / Dir.x) + ((rand() % 11 + (-5) / 10))*ang*rad));
+	cVector2 nuevo1 = (nuevo - Position);
+	nuevo1.normalize();
+	nuevo1*= mag;
+	return nuevo1;
 }
 
-cVector2 cBoid::Follow_path()
+cVector2 cBoid::Follow_path(cVector2 prev, cVector2 next, float mag)
 {
-	return cVector2();
+
+	cVector2 dis = (next - prev);
+	cVector2 pos = (Position - prev);
+	cVector2 a = Seek(next, 1);
+	a.normalize;
+	cVector2 b = a.projection(next);
+	b.normalize;
+	cVector2 nuevo = (a + b);
+	nuevo.normalize();
+	nuevo *= mag;
+	return nuevo;
 }
+
 
 cVector2 cBoid::Patrol()
 {
+
+	//nuevo.normalized();
 	return cVector2();
 }
