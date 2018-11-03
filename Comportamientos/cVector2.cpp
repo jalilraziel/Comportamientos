@@ -3,8 +3,8 @@
 
 cVector2::cVector2()
 {
-	x = 0;
-	y = 0;
+	x = 0.0f;
+	y = 0.0f;
 }
 
 cVector2::cVector2(float a, float b)
@@ -15,22 +15,24 @@ cVector2::cVector2(float a, float b)
 
 cVector2 cVector2::normalized()
 {
+	float a = x / Mag(), b = y / Mag();
 	cVector2 nuevo;
-	nuevo.x = x / Mag();
-	nuevo.y = y / Mag();
+	nuevo.x = a;
+	nuevo.y = b;
 	return nuevo;
 }
 
 void cVector2::normalize()
 {
-	x = x / Mag();
-	y = y / Mag();
-
+	float a = x / Mag(), b = y / Mag();
+	x = a;
+	y = b;
 }
 
 float cVector2::Mag()
 {
-	float A = sqrt(pow(x, 2) + pow(x, 2));
+	float E = ((x*x)+(y*y));
+	float A = sqrt(E);
 	return A;
 }
 
@@ -44,6 +46,17 @@ float cVector2::dot(cVector2 other)
 {
 	float A = ((x * other.x) + (y * other.y));
 	return A;
+}
+
+cVector2& cVector2::truncate(float maxMag)
+{
+	float mag = Mag();
+	if (mag > maxMag) {
+		normalize();
+		*this *= maxMag;
+	}
+
+	return *this;
 }
 
 cVector2 cVector2::projection(cVector2 other)
@@ -96,8 +109,8 @@ cVector2 cVector2::operator*(float veces)
 
 void cVector2::operator*=(float veces)
 {
-	x *= x * veces;
-	y *= y * veces;
+	x *=  veces;
+	y *= veces;
 }
 
 cVector2 cVector2::operator/(float veces)
@@ -110,8 +123,8 @@ cVector2 cVector2::operator/(float veces)
 
 void cVector2::operator/=(float veces)
 {
-	x /= x / veces;
-	y /= y / veces;
+	x /= veces;
+	y /= veces;
 }
 
 void cVector2::operator=(cVector2 other)

@@ -1,13 +1,21 @@
 #include "cObjetoDeJuego.h"
 
-void cGameObject::SetPosition(int X,int Y)
+void cGameObject::SetPosition(float X, float Y)
 {
-	this->Position.x = X;
-	this->Position.x = Y;
+	Position.x = X;
+	Position.y = Y;
+}
+
+void cGameObject::SetPosition(cVector2 a)
+{
+	Position.x = a.x;
+	Position.y = a.y;
 }
 
 cGameObject::cGameObject()
 {
+	Position.x = 0;
+	Position.y = 0;
 }
 
 

@@ -1,0 +1,8 @@
+﻿  cBoid.cpp
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cboid.cpp(150): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cboid.cpp(152): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cboid.cpp(153): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cboid.cpp(160): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  Source.cpp
+  Generando código...
+  Comportamientos.vcxproj -> C:\Users\Jalil Raziel\source\repos\Comportamientos\Debug\Comportamientos.exe

@@ -1,0 +1,17 @@
+﻿  Cagente.cpp
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cagente.cpp(72): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cagente.cpp(74): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cagente.cpp(75): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cagente.cpp(82): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  cObjetoDeJuego.cpp
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cobjetodejuego.cpp(5): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cobjetodejuego.cpp(6): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+  cVector2.cpp
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cvector2.cpp(33): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cvector2.cpp(39): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cvector2.cpp(52): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  Source.cpp
+  Generando código
+  All 1 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  Comportamientos.vcxproj -> C:\Users\Jalil Raziel\source\repos\Comportamientos\Release\Comportamientos.exe

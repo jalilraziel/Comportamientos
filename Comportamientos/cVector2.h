@@ -9,6 +9,7 @@ struct  cVector2
 	float Mag();
 	float ang();
 	float dot(cVector2 b);
+	cVector2& truncate(float maxMag);
 	cVector2 projection(cVector2 other);
 	cVector2 cross(cVector2 b);
 	cVector2 operator+(cVector2 other);

@@ -1,1 +1,8 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Platform.targets(57,5): error MSB8020: The build tools for v141 (Platform Toolset = 'v141') cannot be found. To build using the v141 build tools, please install v141 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".
+﻿  cBoid.cpp
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cboid.cpp(77): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cboid.cpp(79): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cboid.cpp(80): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\cboid.cpp(87): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  Source.cpp
+c:\users\jalil raziel\source\repos\comportamientos\comportamientos\source.cpp(2): fatal error C1083: No se puede abrir el archivo incluir: 'sfml\Graphics.hpp': No such file or directory
+  Generando código...

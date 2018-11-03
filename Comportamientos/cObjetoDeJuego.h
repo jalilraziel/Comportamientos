@@ -6,8 +6,9 @@ protected:
 	cVector2 Position;
 public:
 	cVector2 GetPosition() { return Position; };
-	void SetPosition(int,int);
+	void SetPosition(float, float);
+	void SetPosition(cVector2);
 	cGameObject();
-	~cGameObject();
+	virtual ~cGameObject();
 };
 
